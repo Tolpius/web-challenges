@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!--
+This page looks quite confusing. 
+It would be much better to use semantic HTML to structure this code. 
+Let’s fix this mess!
+(Hints are provided below some elements to help you out.)
+-->
+<html lang="en">
+  <head>
+    <title>HTML Basics Excercise</title>
+    <meta charset="UTF-8" />
+  </head>
+  <!-- Someone forgot to wrap the content of our webpage with an HTML element,
+	which one was it again? -->
+  <body>
+    <header>
+      <!-- Which elements could be used to link to parts of the webpage,
+		  which appear below? -->
+      <div id="nav">
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <title>HTML Basics Exercise</title>
+            <meta charset="UTF-8" />
+          </head>
+          <body>
+            <header>
+              <h1>Jane Doe</h1>
+              <nav>
+                <ul>
+                  <li><a href="#about-me">About Me</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#skills">Skillset</a></li>
+                </ul>
+              </nav>
+            </header>
+            <main>
+              <section id="about-me">
+                <h2>About me</h2>
+                <p>
+                  Hi there! Welcome to my personal website. Here is gathered the
+                  most important information about me. If you want to work with
+                  me or get to know me, please don't hesitate to get in contact.
+                </p>
+                <figure>
+                  <img
+                    src="https://source.unsplash.com/random/400x300?fruit"
+                    alt="a random picture"
+                  />
+                  <figcaption>
+                    A random picture, because I would like to maintain my
+                    privacy and let my code speak for me, instead of images.
+                  </figcaption>
+                </figure>
+              </section>
+
+              <section id="contact">
+                <h2>Contact</h2>
+                <ul>
+                  <li>
+                    <a href="https://github.com" target="_blank" rel="noopener"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://de.linkedin.com/"
+                      target="_blank"
+                      rel="noopener"
+                      >LinkedIn</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://codesandbox.io/"
+                      target="_blank"
+                      rel="noopener"
+                      >CodeSandbox</a
+                    >
+                  </li>
+                </ul>
+              </section>
+
+              <section id="skills">
+                <h2>Skillset</h2>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>React</li>
+                  <li>Painting rainbows</li>
+                  <li>Party</li>
+                </ul>
+              </section>
+            </main>
+          </body>
+        </html>
+      </div>
+    </header>
+  </body>
+</html>
