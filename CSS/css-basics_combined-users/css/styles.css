@@ -38,30 +38,34 @@ li {
 .user {
   position: relative;
   border: 2px solid lightslategray;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 4px 4px 0 lightslategray;
-  padding: 20px;
-  max-width: 400px;
+  padding: 12px;
+  max-width: 250px;
   margin: 0;
   background-color: white;
 }
 
 .name {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   margin: 0;
 }
 
 .bio {
-  font-size: 14px;
+  font-size: 12px;
   color: darkslategray;
+  margin: 6px 0;
 }
 
 .location {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   text-align: end;
   margin: 0;
+}
+ul .user .bio {
+  display: none;
 }
 
 /*
