@@ -41,12 +41,21 @@ main {
 
 .box--top-right {
   background-color: #5dade2;
+  right: 0px;
+  top: 0px;
+  position: absolute;
 }
 
 .box--bottom-left {
   background-color: #2874a6;
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
 }
 
 .box--bottom-right {
   background-color: #1b4f72;
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
 }
