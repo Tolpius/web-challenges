@@ -22,6 +22,7 @@
 
 .animal {
   padding: 16px;
+  font-size: 32px;
 
   /*
     The animals are very small.
@@ -30,6 +31,23 @@
   */
 }
 
+div[class="animal giraffe"] {
+  text-align: center;
+}
+div[class="animal dino"] {
+  text-align: right;
+}
+
+div[class="animal crocodile"]:hover {
+  background-color: lightblue;
+}
+div[class="animal giraffe"]:hover {
+  background-color: lightgreen;
+}
+
+div[class="animal dino"]:hover {
+  background-color: lightsalmon;
+}
 /*
   The giraffe is afraid of the crocodile and the dino.
    - Center the giraffe in the park.
@@ -45,5 +63,5 @@
    - The giraffe likes lightgreen.
    - The dino is a huge fan of lightsalmon.
 
-  💡 You'll need to use a pseudo-class selector for each animal.
+  💡 You"ll need to use a pseudo-class selector for each animal.
 */
