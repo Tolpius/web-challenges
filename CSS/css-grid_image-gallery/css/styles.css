@@ -30,6 +30,8 @@ body {
 .teaser-grid {
   min-width: 40rem;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   /* Add styles to the grid container */
 }
@@ -51,7 +53,6 @@ body {
 .teaser-grid__teaser--summer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-
 }
 
 .teaser-grid__teaser--autumn {
