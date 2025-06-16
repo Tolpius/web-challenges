@@ -10,9 +10,9 @@ console.log("Exercise 1:");
 // logText;
 
 function logText() {
-  console.log("This text does not appear. Why?");
+  console.log("This text does not appear. Why? ......  now it does!");
 }
-
+logText();
 console.log("-------------");
 console.log("Exercise 2:");
 /*
@@ -32,13 +32,16 @@ function greetMary() {
   console.log("Welcome Mary, good to see you again!");
 }
 
-greetAlice();
-greetBob();
-greetMary();
 
 // --v-- write your code here --v--
 
-function greet() {}
+function greet(name) {
+  console.log(`Welcome ${name}, good to see you again!`);
+}
+greet("Alice");
+greet("Bob");
+greet("Mary");
+
 
 // --^-- write your code here --^--
 
