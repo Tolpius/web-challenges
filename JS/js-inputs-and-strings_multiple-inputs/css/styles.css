@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  background-color: #ddd;
+}
+
+.form {
+  display: grid;
+  gap: 20px;
+  align-content: center;
+  margin: 50px auto;
+  padding: 25px;
+  max-width: 500px;
+  background-color: #fff;
+}
+
+.input,
+.button {
+  border: 1px solid #888;
+  padding: 5px 10px;
+}
+
+.output {
+  border: 1px solid #ccc;
+  height: 30px;
+  padding: 6px 10px;
+}
