@@ -9,6 +9,8 @@ let currentColorIndex = 0;
 
 changeColorButton.addEventListener("click", () => {
   // Add your solution below
+  colorChangeCard.style.backgroundColor = colors[currentColorIndex];
+  currentColorIndex = (currentColorIndex + 1) % colors.length;
 });
 
 /*  -----------------------------------------------------------
@@ -28,7 +30,8 @@ const loaderContainer = document.querySelector("[data-js=loaderContainer]");
 let loaderActive = false;
 
 toggleLoaderButton.addEventListener("click", () => {
-  // Add your solution below
+  loaderActive = !loaderActive;
+  loaderContainer.classList.toggle("active", loaderActive);
 });
 
 /*  -----------------------------------------------------------
@@ -38,5 +41,6 @@ const slideInButton = document.querySelector("[data-js=slideInButton]");
 const slideInBox = document.querySelector("[data-js=slideInBox]");
 
 slideInButton.addEventListener("click", () => {
-  // Add your solution below
+
+  slideInBox.classList.toggle("hidden");
 });

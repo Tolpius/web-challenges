@@ -34,7 +34,10 @@ Add here the code for each challenge
 /* Write here your solution for this challenge.
 The button that you are working with as an id attribute set in  #hoverButton*/
 
-
+.hoverButton:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
 
 
 /*  -----------------------------------------------------------
@@ -70,13 +73,13 @@ The button that you are working with as an id attribute set in  #hoverButton*/
     border-radius: 50%;
     width: 50px;
     height: 50px;
-
-    /* Write here your solution with the spinning animation */
-
+    animation: spin 1s linear infinite;
 }
 
-/* Add to the keyframes the transformation */
-@keyframes spin {}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 /*  -----------------------------------------------------------
             Challenge 4: Slide-in Div
@@ -96,7 +99,13 @@ The button that you are working with as an id attribute set in  #hoverButton*/
     font-weight: bold;
     color: #333;
     margin-top:15px;
+        transition: right 0.5s ease-in-out;
     /* Write here your solution */
     /* Hides it initially to the right */
     /* Smooth slide transition */
+}
+
+.slideInBox.hidden {
+    right: -200%;
+
 }
