@@ -1,0 +1,28 @@
+.form {
+  padding: 10rem 2rem 3rem 2rem;
+  max-width: 650px;
+  margin: 0 auto;
+  display: grid;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__character-count {
+  justify-self: end;
+  color: var(--black-light);
+}
+
+.form__submit-button {
+  width: 40%;
+  align-self: center;
+  background: var(--secondary);
+  color: var(--white);
+  border: none;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.form__submit-button:hover {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
