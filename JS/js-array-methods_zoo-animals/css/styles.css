@@ -1,0 +1,28 @@
+@import './variables.css';
+@import './form.css';
+@import './animal.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  /* margin: 0; */
+  font-family: system-ui;
+  background-color: var(--secondary-light);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: center;
+
+}
+
+.output {
+  margin-top: 1em;
+  font-size: 1.5em;
+}
