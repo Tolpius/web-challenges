@@ -3,6 +3,13 @@ import { setColorToGuess, getRandomHexCode } from "./utils.js";
 export async function fetchNewColor() {
   const hexCode = getRandomHexCode();
   const colorApiUrl = `https://www.thecolorapi.com/id?hex=${hexCode}`;
+  const ressponse = await fetch(colorApiUrl);
+  const data = await ressponse.json();
+  const hex = data.hex.value;
+  const closestName = data.name.value;
+  console.log(hex);
+  console.log(closestName);
+  setColorToGuess(hex, closestName);
   /**
    * Hint 1:
    * Use the fetch API to get the hex value and the name of the closest
