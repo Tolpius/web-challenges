@@ -1,0 +1,29 @@
+@import './variables.css';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+body {
+  background: var(--primary);
+  background-image: var(--bg-gradient);
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  gap: 30px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+}
