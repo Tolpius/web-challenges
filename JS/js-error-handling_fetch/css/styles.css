@@ -1,0 +1,78 @@
+@import './variables.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  margin: 0;
+  padding: 2rem 0;
+  min-height: 100vh;
+  background: var(--primary);
+  background-image: var(--bg-gradient);
+}
+
+main {
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-light);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.user__image {
+  width: 100px;
+  height: auto;
+  border: 1px solid var(--secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actions button {
+  flex: 1;
+  line-height: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: var(--secondary-light);
+  color: var(--primary);
+}
+
+.error {
+  color: var(--error-accent);
+  line-height: 3rem;
+  font-size: 1.2rem;
+}
