@@ -1,6 +1,8 @@
 import "./Form.css";
 
 export default function Form({ onAddTag }) {
+
+
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -12,6 +14,8 @@ export default function Form({ onAddTag }) {
     event.target.elements.tag.focus();
   }
 
+
+  
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h2>Add a new Tag</h2>

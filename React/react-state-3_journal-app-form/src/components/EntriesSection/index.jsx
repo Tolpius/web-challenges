@@ -6,7 +6,7 @@ import Tab from "../Tab";
 import Badge from "../Badge";
 import { Fragment } from "react";
 
-const entries = [
+export const initialEntries = [
   {
     id: 1000,
     date: "Feb 5, 2025",
@@ -36,7 +36,8 @@ const entries = [
   },
 ];
 
-export default function EntriesSection() {
+export default function EntriesSection({ entries }) {
+  try{
   return (
     <section className="entries-section">
       <Tabs>
@@ -58,3 +59,8 @@ export default function EntriesSection() {
     </section>
   );
 }
+catch (error) {
+  console.error("Error rendering EntriesSection:", error);
+  console.error("Entries data:", entries);
+  return <div className="error">Failed to load entries.</div>;
+}}

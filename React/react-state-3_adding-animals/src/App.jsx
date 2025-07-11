@@ -25,7 +25,9 @@ export default function App() {
   const [animals, setAnimals] = useState(initialAnimals);
 
   function handleAddAnimal(newAnimal) {
-    console.log(newAnimal);
+    newAnimal.id = crypto.randomUUID();
+    setAnimals((prevAnimals) => [...prevAnimals, newAnimal]);
+    console.log("New animal added:", newAnimal);
   }
 
   return (
