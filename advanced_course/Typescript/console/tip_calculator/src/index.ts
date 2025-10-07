@@ -62,12 +62,12 @@ async function main(): Promise<void> {
       await question("How many people will split the bill?")
     );
     while (true) {
-      if (isValidNumber(splitAmount)) {
+      if (isValidNumber(splitAmount) && splitAmount > 0 && Number.isInteger(splitAmount)) {
         break;
       }
       splitAmount = Number(
         await question(
-          "How many people will split the bill?\nYour Answer needs to be a number (e.g. 5)"
+          "How many people will split the bill?\nYour Answer needs to be a valid number (e.g. 5)"
         )
       );
     }
