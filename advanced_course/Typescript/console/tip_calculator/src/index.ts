@@ -62,7 +62,11 @@ async function main(): Promise<void> {
       await question("How many people will split the bill?")
     );
     while (true) {
-      if (isValidNumber(splitAmount) && splitAmount > 0 && Number.isInteger(splitAmount)) {
+      if (
+        isValidNumber(splitAmount) &&
+        splitAmount > 0 &&
+        Number.isInteger(splitAmount)
+      ) {
         break;
       }
       splitAmount = Number(
@@ -74,7 +78,7 @@ async function main(): Promise<void> {
   }
   const tipAmount = ((check / 100) * percentage).toFixed(2);
   const total = (check + Number(tipAmount)).toFixed(2);
-  const totalEach = (check / splitAmount).toFixed(2);
+  const totalEach = (Number(total) / splitAmount).toFixed(2);
 
   console.log(`--- Tip Calculation Summary ---
 Check Amount: $${check}
