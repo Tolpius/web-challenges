@@ -76,10 +76,10 @@ async function main(): Promise<void> {
       );
     }
   }
+
   const tipAmount = ((check / 100) * percentage).toFixed(2);
   const total = (check + Number(tipAmount)).toFixed(2);
   const totalEach = (Number(total) / splitAmount).toFixed(2);
-
   console.log(`--- Tip Calculation Summary ---
 Check Amount: $${check}
 Tip Percentage: ${percentage}%
