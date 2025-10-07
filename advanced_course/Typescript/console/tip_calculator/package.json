@@ -1,0 +1,8 @@
+{
+  "name": "tip_calculator",
+  "version": "1.0.0",
+  "type": "module", 
+  "devDependencies": {
+    "@types/node": "^24.7.0"
+  }
+}
