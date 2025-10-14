@@ -1,0 +1,9 @@
+{% macro input(name, type, placeholder, required=false) %}
+<input
+  class="form-control"
+  id="{{ name }}"
+  type="{{ type }}"
+  placeholder="{{ placeholder }}"
+  data-sb-validations="{{ 'required' if required }}"
+/>
+{% endmacro %}
