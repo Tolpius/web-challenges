@@ -5,6 +5,7 @@ import { Request, Response } from "express";
 import nunjucks from "nunjucks";
 import entryData from "./data/entries.json";
 import { logger } from "./middlewares/loggerMiddleware";
+import { aboutController } from "./controllers/aboutController";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,7 +15,7 @@ app.use(cors());
 
 app.use(express.static("public"));
 
-const nunEnv = nunjucks.configure("src/templates", {
+const nunEnv = nunjucks.configure("src/views", {
   autoescape: true,
   express: app,
 });
@@ -28,22 +29,18 @@ nunEnv.addFilter("formatDate", function (timestamp: number) {
 });
 
 app.get("/", (req: Request, res: Response) => {
-  res.render("index.html", {
+  res.render("pages/index.html", {
     title: "Home Page",
     entryData,
   });
 });
 
 app.get("/contact", (req: Request, res: Response) => {
-  res.render("contact.html", {
+  res.render("pages/contact.html", {
     title: "Contact Page",
   });
 });
-app.get("/about", (req: Request, res: Response) => {
-  res.render("about.html", {
-    title: "About Page",
-  });
-});
+app.get("/about", aboutController);
 //routing dynamik
 app.get("/post/:createdAt", (req: Request, res: Response) => {
   const postTimestamp = parseInt(req.params.createdAt);
@@ -53,7 +50,7 @@ app.get("/post/:createdAt", (req: Request, res: Response) => {
     return res.status(404).send("Post not found");
   }
 
-  res.render("post.html", {
+  res.render("pages/post.html", {
     title: post.title || "Blog Post",
     post,
   });
