@@ -2,7 +2,7 @@ import * as fsCRUD from "../fs/fsCrudOperations";
 import * as path from "node:path";
 import { BlogEntries } from "../types/models";
 
-const FILE_PATH = path.join(__dirname, "..", "data", "blog-entries.json");
+const FILE_PATH = path.join(__dirname, "..", "data", "entries.json");
 
 export async function getAllBlogEntries():Promise<BlogEntries> {
   try {

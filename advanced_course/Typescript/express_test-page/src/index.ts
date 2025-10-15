@@ -1,14 +1,10 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import { Request, Response } from "express";
 import nunjucks from "nunjucks";
-import entryData from "./data/entries.json";
 import { logger } from "./middlewares/loggerMiddleware";
-import { aboutController } from "./controllers/aboutController";
-import { homeController } from "./controllers/homeController";
-import { postController } from "./controllers/postController";
-import { contactController } from "./controllers/contactController";
+import publicRoutes from "./routes/publicRoutes";
+import adminRoutes from "./routes/adminRoutes"
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -31,10 +27,11 @@ nunEnv.addFilter("formatDate", function (timestamp: number) {
   });
 });
 
-app.get("/", homeController)
-.get("/contact", contactController)
-.get("/about", aboutController)
-.get("/post/:createdAt", postController);
+/** Routes **/
+
+app
+.use(publicRoutes)
+.use("/admin", adminRoutes);
 
 app.listen(PORT, () => {
   console.log(`server is Running at http://localhost:${PORT}`);
