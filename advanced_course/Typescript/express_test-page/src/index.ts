@@ -6,6 +6,9 @@ import nunjucks from "nunjucks";
 import entryData from "./data/entries.json";
 import { logger } from "./middlewares/loggerMiddleware";
 import { aboutController } from "./controllers/aboutController";
+import { homeController } from "./controllers/homeController";
+import { postController } from "./controllers/postController";
+import { contactController } from "./controllers/contactController";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -28,33 +31,10 @@ nunEnv.addFilter("formatDate", function (timestamp: number) {
   });
 });
 
-app.get("/", (req: Request, res: Response) => {
-  res.render("pages/index.html", {
-    title: "Home Page",
-    entryData,
-  });
-});
-
-app.get("/contact", (req: Request, res: Response) => {
-  res.render("pages/contact.html", {
-    title: "Contact Page",
-  });
-});
-app.get("/about", aboutController);
-//routing dynamik
-app.get("/post/:createdAt", (req: Request, res: Response) => {
-  const postTimestamp = parseInt(req.params.createdAt);
-  const post = entryData.find((entry) => entry.createdAt === postTimestamp);
-
-  if (!post) {
-    return res.status(404).send("Post not found");
-  }
-
-  res.render("pages/post.html", {
-    title: post.title || "Blog Post",
-    post,
-  });
-});
+app.get("/", homeController)
+.get("/contact", contactController)
+.get("/about", aboutController)
+.get("/post/:createdAt", postController);
 
 app.listen(PORT, () => {
   console.log(`server is Running at http://localhost:${PORT}`);
