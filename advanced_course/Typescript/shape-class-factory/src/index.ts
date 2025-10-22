@@ -1,0 +1,1 @@
+console.warn("this repo only shows the functionality of a class factory.\n Run 'npm test' to confirm its working")
