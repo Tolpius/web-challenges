@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true, // Crucial for decorators with DI
+    "experimentalDecorators": true, // Crucial for decorators
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2019", // Modern JS target
+    "sourceMap": true,
+    "outDir": "./dist", // Where compiled JS goes
+    "baseUrl": "./src",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false
+  }
+}
